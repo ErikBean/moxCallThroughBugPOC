@@ -28,7 +28,7 @@ describe("testing mox spies", function () {
                 expect(num).toBe('fakeReturn');
             });
             it("should be able to call through from the spy", function () {
-                //THIS TEST FAILS!
+                //THIS TEST FAILS! (not anymore with mox 0.5.0)
                 moxTestService.addOne.and.callThrough();
                 var num = 1;
                 num = moxTestService.addOne(num, "This should also print to the console and increment value, should call the spy AND the real function");
